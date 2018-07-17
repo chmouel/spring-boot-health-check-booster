@@ -1,9 +1,8 @@
-node("launchpad-maven") {
-  checkout scm
-  stage("Test") {
-    sh "mvn test"
-  }
-  stage("Deploy") {
-    sh "mvn fabric8:deploy -Popenshift -DskipTests"
-  }
+#!/usr/bin/groovy
+
+@Library('github.com/chmouel/osio-pipeline-helpers@master')
+def arg = null
+
+osio {
+
 }
